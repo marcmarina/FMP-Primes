@@ -2,6 +2,7 @@
   "name": "fmp-primes",
   "version": "1.0.0",
   "main": "index.js",
+  "type": "module",
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com/marcmarina/FMP-Primes.git"
