@@ -10,7 +10,8 @@
   "author": "Marc Marina Miravitlles <marc.marina.miravitlles@gmail.com>",
   "homepage": "https://github.com/marcmarina/FMP-Primes#readme",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "start": "node index.js"
   },
   "keywords": [],
   "description": "",

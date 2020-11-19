@@ -1,7 +1,11 @@
 export const isPrime = num => {
-  for (let i = 2; i <= num / 2; i++) {
+  if (num <= 3) return true; // 1, 2 and 3 are prime numbers, so no need to do the division
+
+  // I am using the square root method to optimise the algorithm
+  for (let i = 2; i <= Math.sqrt(num); i++) {
     if (num % i === 0) return false;
   }
+
   return true;
 };
 
