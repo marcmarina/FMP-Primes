@@ -1,7 +1,7 @@
 {
   "name": "fmp-primes",
   "version": "1.0.0",
-  "main": "index.mjs",
+  "main": "index.js",
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com/marcmarina/FMP-Primes.git"
@@ -9,7 +9,7 @@
   "author": "Marc Marina Miravitlles <marc.marina.miravitlles@gmail.com>",
   "homepage": "https://github.com/marcmarina/FMP-Primes#readme",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "keywords": [],
   "description": "",
@@ -17,6 +17,9 @@
     "inquirer": "^7.3.3"
   },
   "devDependencies": {
+    "@babel/preset-env": "^7.12.1",
+    "@types/jest": "^26.0.15",
+    "babel-jest": "^26.6.3",
     "jest": "^26.6.3"
   }
 }
