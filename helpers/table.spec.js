@@ -32,10 +32,10 @@ test('stringifies a table correctly', () => {
     [3, 6, 9, 15],
     [5, 10, 15, 25],
   ];
-  const expected = `     2  3  5
-  2  4  6 10
-  3  6  9 15
-  5 10 15 25`;
+  const expected = `   2  3  5
+2  4  6 10
+3  6  9 15
+5 10 15 25`;
 
-  expect(stringifyTable(table)).toStrictEqual(expected);
+  expect(stringifyTable(table)).toBe(expected);
 });

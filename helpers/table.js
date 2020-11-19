@@ -29,15 +29,19 @@ export const generateTable = primes => {
 };
 
 export const stringifyTable = table => {
-  const largestStringSize = `${table[table.length - 1][table.length - 1]}`
-    .length;
+  const padSize = `${table[table.length - 1][table.length - 1]}`.length + 1; // Length of the longest number + 1
+  const leftPadSize = `${table[table.length - 1][0]}`.length; // Length of the number in the bottom-left corner
 
   let result = '';
   for (let i = 0; i < table.length; i++) {
     for (let j = 0; j < table.length; j++) {
-      result += `${table[i][j]}`.padStart(largestStringSize + 1, ' ');
+      const addition = `${table[i][j]}`.padStart(
+        j === 0 ? leftPadSize : padSize,
+        ' '
+      );
+      result += addition;
     }
-    if (i < table.length - 1) result += '\n';
+    if (i < table.length - 1) result += '\n'; // If it's the last row no line break is needed
   }
   return result;
 };
