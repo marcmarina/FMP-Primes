@@ -1,21 +1,28 @@
-import { generatePrimes, isPrime } from './primes';
+import { generatePrimes, isPrime, isPrime6k } from './primes';
 
 test('returns true for a prime', () => {
-  expect(isPrime(5)).toBe(true);
-  expect(isPrime(11)).toBe(true);
-  expect(isPrime(17)).toBe(true);
-  expect(isPrime(1033)).toBe(true);
-  expect(isPrime(4919)).toBe(true);
+  expect(isPrime6k(2)).toBe(true);
+  expect(isPrime6k(3)).toBe(true);
+  expect(isPrime6k(5)).toBe(true);
+  expect(isPrime6k(11)).toBe(true);
+  expect(isPrime6k(17)).toBe(true);
+  expect(isPrime6k(1033)).toBe(true);
+  expect(isPrime6k(4919)).toBe(true);
 });
 
 test('returns false for a non-prime', () => {
-  expect(isPrime(4)).toBe(false);
-  expect(isPrime(9)).toBe(false);
-  expect(isPrime(12)).toBe(false);
-  expect(isPrime(1252)).toBe(false);
-  expect(isPrime(1000000)).toBe(false);
+  expect(isPrime6k(-3)).toBe(false);
+  expect(isPrime6k(1)).toBe(false);
+  expect(isPrime6k(4)).toBe(false);
+  expect(isPrime6k(9)).toBe(false);
+  expect(isPrime6k(12)).toBe(false);
+  expect(isPrime6k(1252)).toBe(false);
+  expect(isPrime6k(1000000)).toBe(false);
 });
 
 test('returns a correct array of primes', () => {
-  expect(generatePrimes(6)).toStrictEqual([1, 2, 3, 5, 7, 11]);
+  const primes = generatePrimes(20000);
+  for (let num of primes) {
+    expect(isPrime(num)).toBe(true);
+  }
 });

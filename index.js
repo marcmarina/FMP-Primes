@@ -10,7 +10,8 @@ const main = async () => {
       message: 'How many primes do you want?',
     });
     const size = parseInt(answers.size);
-    const primes = generatePrimes(size + 1).splice(1); // Removing the first prime, 1, as it was shown in the test instructions
+
+    const primes = generatePrimes(size);
     console.log(stringifyTable(generateTable(primes))); // Showing the generated table
   } catch (err) {
     console.log(err);

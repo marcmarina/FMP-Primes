@@ -36,7 +36,7 @@ export const stringifyTable = table => {
   for (let i = 0; i < table.length; i++) {
     for (let j = 0; j < table.length; j++) {
       const addition = `${table[i][j]}`.padStart(
-        j === 0 ? leftPadSize : padSize,
+        j === 0 ? leftPadSize : `${table[table.length - 1][j]}`.length + 1,
         ' '
       );
       result += addition;
