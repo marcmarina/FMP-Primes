@@ -18,6 +18,7 @@ const main = async () => {
     } else {
       if (size === 1) console.log('A number higher than 1 is suggested');
       const primes = generateFibonacci(size);
+      // const primes = generatePrimes(size);
       const table = generateTable(primes);
       console.log(stringifyTable(table)); // Showing the generated table
     }

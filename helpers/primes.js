@@ -23,11 +23,7 @@ export const isPrime6k = num => {
 export const generatePrimes = size => {
   const primes = [2, 3];
 
-  if (size === 0) {
-    return [];
-  } else if (size === 1) {
-    return [2];
-  }
+  if (size < 3) return primes.slice(0, size);
 
   let complete = false;
   let num = 5;
