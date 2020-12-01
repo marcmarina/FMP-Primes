@@ -23,10 +23,16 @@ export const isPrime6k = num => {
 export const generatePrimes = size => {
   const primes = [2, 3];
 
+  if (size === 0) {
+    return [];
+  } else if (size === 1) {
+    return [2];
+  }
+
   let complete = false;
   let num = 5;
   do {
-    if (primes.length === size) {
+    if (primes.length >= size) {
       complete = true;
     } else {
       if (isPrime6k(num)) primes.push(num);

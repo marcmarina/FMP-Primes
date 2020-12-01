@@ -26,3 +26,13 @@ test('returns a correct array of primes', () => {
     expect(isPrime(num)).toBe(true);
   }
 });
+
+test('returns an array of primes of correct size', () => {
+  const primes = generatePrimes(0);
+  expect(primes.length).toBe(0);
+});
+
+test('returns an array of primes of correct size', () => {
+  const primes = generatePrimes(1);
+  expect(primes.length).toBe(1);
+});
