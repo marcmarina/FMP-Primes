@@ -4,8 +4,6 @@ orbs:
 workflows:
   node-tests:
     jobs:
-      - node/test:
-          version: 13.11.0
       - test
       
 jobs:
@@ -15,5 +13,4 @@ jobs:
     steps:     
       - checkout
       - run: yarn
-      - run: yarn test   
-
+      - run: yarn test
